@@ -34,7 +34,7 @@ var _firbaseDB = firebase.database(),
     _storageRootRef = _storageDB.ref(),
     _firebaseRootRef = _firbaseDB.ref(),
     _firebaseAuthRef = _firbaseDB.ref("Auth/"),
-    _firebaseChatRef = _firbaseDB.ref("Chats/"),
+    _firebaseChatRef = _firbaseDB.ref("Index/"),
     _formData,
     _event,
     _CURRENT_USER,
@@ -76,7 +76,7 @@ function signupAuth(name, email, pass) {
             $(".su-welcome").show();
             $.cookie("_cu", _CURRENT_USER);
             setTimeout(function() {
-                window.location.href = "chat.html"
+                window.location.href = "index.html"
             }, 2000);
             writeUserData(_CURRENT_USER, name, email);
         })
@@ -118,7 +118,7 @@ function loginAuth(email, pass) {
                 $(".lg-welcome").show();
                 $.cookie("_cu", _CURRENT_USER);
                 setTimeout(function() {
-                    window.location.href = "chat.html"
+                    window.location.href = "index.html"
                 }, 2000);
             }
         })
@@ -152,7 +152,7 @@ $(".logout").on("click", function(ev) {
 firebase.auth().onAuthStateChanged(function(user) {
 
 
-    if (user && window.location.pathname == "/Fiverr/Firebase%20Chat%20App/chat.html") {
+    if (user && window.location.pathname == "/Fiverr/Firebase%20Chat%20App/index.html") {
 
 
         _CURRENT_USER = $.cookie("_cu");

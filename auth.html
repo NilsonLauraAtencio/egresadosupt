@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Auth | Home</title>
+	<title>Autentificacion | Egresados Epis - UPT</title>
+
+  <!-- Favicon -->
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,33 +26,39 @@
 
 			<div class="col-sm-12 col-md-6 col-lg-4 user-form user-signup">
 				<div class="jfw-head row">
-					<div class="col-6 jfw-logo-sec">
-						<img src="assets/logo.svg">
+					<div class="col-6 jfw-logo-sec ">
+						<img src="assets/logo/Logo.png">
+					</div>
+          <div class="col-6 jfw-logo-sec ">
+						<img src="assets/logo/logoEPIS.png">
 					</div>
 				</div>
-				<div class="user-form-head"> Create your Free Account </div>
+				<div class="user-form-head"> Egresados EPIS <br>Registrate </div>
 				<form method="POST" id="su_form" class="auth-form auth-signup">
 					<div class="col-12 su-error">  </div>
-					<input type="text" name="su-fname" placeholder="Full Name" class="type-inp">
-					<input type="Email" name="su-email" placeholder="Email Address" class="type-inp">
-					<input type="Password" name="su-pass" placeholder="Password" class="type-inp">
+					<input type="text" name="su-fname" placeholder="Nombre Completo" class="type-inp">
+					<input type="Email" name="su-email" placeholder="E-mail" class="type-inp">
+					<input type="Password" name="su-pass" placeholder="password" class="type-inp">
 					<input type="submit" name="su-submit" value="Sign Up" class="cus-btn cus-btn-blue su-submit">
 				</form>
 				<div class="account-ask">
-					Already have an account ? <a href="#" class="show-login">Login</a>
+					Tienes cuenta? <a href="#" class="show-login">Login</a>
 				</div>
 			</div>
 
 			<div class="col-sm-12 col-md-6 col-lg-4 user-form user-login">
 				<div class="jfw-head row">
 					<div class="col-6 jfw-logo-sec">
-						<img src="assets/logo.svg">
+						<img src="assets/logo/Logo.png">
+					</div>
+          <div class="col-6 jfw-logo-sec">
+						<img src="assets/logo/logoEPIS.png">
 					</div>
 				</div>
-				<div class="user-form-head"> Login to your account !</div>
+				<div class="user-form-head"> Egresados EPIS <br>LOGIN</div>
 				<form method="POST" id="lg_form" class="auth-form auth-login">
 					<div class="col-12 lg-error">  </div>
-					<input type="Email" name="lg-email" placeholder="Email Address" class="type-inp">
+					<input type="Email" name="lg-email" placeholder="E-mail" class="type-inp">
 					<input type="Password" name="lg-pass" placeholder="Password" class="type-inp">
 					<input type="submit" name="lg-submit"  value="Login" class="cus-btn cus-btn-blue lg-submit">
 				</form>
