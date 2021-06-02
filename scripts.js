@@ -76,7 +76,7 @@ function signupAuth(name, email, pass) {
             $(".su-welcome").show();
             $.cookie("_cu", _CURRENT_USER);
             setTimeout(function() {
-                window.location.href = "formulario.html"
+                window.location.href = "index.html"
             }, 2000);
             writeUserData(_CURRENT_USER, name, email);
         })
@@ -118,7 +118,7 @@ function loginAuth(email, pass) {
                 $(".lg-welcome").show();
                 $.cookie("_cu", _CURRENT_USER);
                 setTimeout(function() {
-                    window.location.href = "formulario.html"
+                    window.location.href = "index.html"
                 }, 2000);
             }
         })
