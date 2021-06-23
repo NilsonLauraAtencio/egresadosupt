@@ -1,6 +1,8 @@
 // registro
 const formulario = document.querySelector('#lg_formR');
 
+const obtenerdatos = () => firest.collection('usuarios').get();
+
 formulario.addEventListener('submit', (e) => {
     e.preventDefault();
 
@@ -11,14 +13,13 @@ formulario.addEventListener('submit', (e) => {
     const correo = document.querySelector('#correo').value;
     const clave = document.querySelector('#clave').value;
     const anioegresousu = document.querySelector('#anioegresousu').value;
-    const gradoprofactualusu = document.getElementById('#gradoprofactualusu');
-    const valorgradoprofactualusu = gradoprofactualusu.options[gradoprofactualusu.selectedIndex].value;
+    const gradoprofactualusu = document.querySelector('input[name="gradoprofactualusu"]:checked').value;
     const radicacionactualusu = document.querySelector('#radicacionactualusu').value;
-    const areadesemvuelveusu = document.getElementById('#areadesemvuelveusu');
-    const valorareadesemvuelveusu = areadesemvuelveusu.options[areadesemvuelveusu.selectedIndex].value;
-    const laborandoactualusu = document.querySelector('#laborandoactualusu').value;
+    const areadesemvuelveusu = document.querySelector('input[name="areadesemvuelveusu"]:checked').value;
+    const laborandoactualusu = document.querySelector('input[name="laborandoactualusu"]:checked').value;
 
 
+    
 
     auth
         .createUserWithEmailAndPassword(correo, clave)
@@ -32,33 +33,43 @@ formulario.addEventListener('submit', (e) => {
                 correo,
                 clave,
                 anioegresousu,
-                valorgradoprofactualusu,
+                gradoprofactualusu,
                 radicacionactualusu,
-                valorareadesemvuelveusu,
+                areadesemvuelveusu,
                 laborandoactualusu,
 
-            })
+            });
 
-            console.log('usuario registrado')
-            console.log( nombreusu,
-                apellidousu,
-                dniusu,
-                telefonousu,
-                correo,
-                clave,
-                anioegresousu,
-                valorgradoprofactualusu,
-                radicacionactualusu,
-                valorareadesemvuelveusu,
-                laborandoactualusu,)
+
+            console.log('usuario registrado');
+            limpiarFormulario();
             
+
+               
         })
 
-
         
-        // setTimeout(function() {
-        //     window.location.href = "auth.html"
-        // }, 2000);
 
     //console.log(correo, clave)
 })
+
+function limpiarFormulario() {
+    document.getElementById("lg_formR").reset();
+  }
+
+  function verificaciondeestado() {
+    
+    auth
+        .SignIn
+    
+    
+    if(valores == "SI")
+    {
+        window.location.href = "SignUp3.html"
+    }
+    else
+    {
+        window.location.href = "SignUp2.html" 
+    }
+    
+  }
