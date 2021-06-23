@@ -73,6 +73,7 @@ function signupAuth(name, email, pass) {
             $(".su-error").text("");
             $(".auth-signup").trigger("reset");
             $(".user-signup").hide();
+            $(".user-info").hide();
             $(".su-welcome").show();
             $.cookie("_cu", _CURRENT_USER);
             setTimeout(function() {
@@ -85,7 +86,7 @@ function signupAuth(name, email, pass) {
                 case "auth/invalid-email":
                     {
                         $(".su-error").show();
-                        $(".su-error").text("Your Email is invalid !");
+                        $(".su-error").text("Tu email es incorrecto !");
                         break;
                     }
                 case "auth/email-already-in-use":
@@ -106,6 +107,7 @@ function signupAuth(name, email, pass) {
 }
 
 
+
 function loginAuth(email, pass) {
     firebase.auth().signInWithEmailAndPassword(email, pass)
         .then(function(res) {
@@ -115,6 +117,8 @@ function loginAuth(email, pass) {
                 $(".lg-error").text("");
                 $(".auth-login").trigger("reset");
                 $(".user-login").hide();
+                $(".auth-info").trigger("reset");
+                $(".user-info").hide();
                 $(".lg-welcome").show();
                 $.cookie("_cu", _CURRENT_USER);
                 setTimeout(function() {
