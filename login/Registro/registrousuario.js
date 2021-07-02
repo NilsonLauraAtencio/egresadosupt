@@ -25,6 +25,8 @@ formulario.addEventListener('submit', (e) => {
         .createUserWithEmailAndPassword(correo, clave)
         .then(userCredential => {
             
+
+
             firest.collection('usuarios').doc().set({
                 nombreusu,
                 apellidousu,
@@ -59,8 +61,7 @@ function limpiarFormulario() {
 
   function verificaciondeestado() {
     
-    auth
-        .SignIn
+    
     
     
     if(valores == "SI")
@@ -73,3 +74,4 @@ function limpiarFormulario() {
     }
     
   }
+
